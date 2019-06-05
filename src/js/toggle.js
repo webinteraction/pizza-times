@@ -44,6 +44,9 @@ export class Toggle {
     // Is toggled?
     const isToggled = target.classList.contains(this.config.toggleClass)
 
+    // Set buttton [aria-expanded]
+    btn.setAttribute('aria-expanded', isToggled)
+
     // Fire onToggle event
     this.config.onToggle(btn, target, isToggled)
   }
