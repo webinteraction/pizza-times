@@ -126,3 +126,44 @@
   white-space: nowrap;
   width: 1px;
 }
+
+// Dismissible disclaimer
+.app-frame {
+  position: relative;
+}
+
+.super-annoying-legal-disclaimer {
+  background: transparentize($lighter, .05);
+  bottom: 0;
+  box-shadow: 0 -4px 8px transparentize($darker, .8);
+  left: 0;
+  padding: 25px;
+  position: absolute;
+  right: 0;
+
+  p {
+    margin: 0;
+  }
+
+  &:not(.active) {
+    display: none;
+  }
+}
+
+// Close button
+.close {
+  background: transparent;
+  box-shadow: none;
+  color: $medium;
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  text-shadow: none;
+  top: 0;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $primary;
+  }
+}
